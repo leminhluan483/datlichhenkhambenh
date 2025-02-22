@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Đăng Ký Khám Bệnh - Phòng Khám</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         margin: 0;
+         padding: 0;
+         background-color: #f0f5ff;
+         color: #333;
+      }
+
+      .header {
+         background: #ffffff;
+         padding: 10px 20px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-text {
+         text-align: center;
+         color: #0056b3;
+      }
+
+      .header-text h1 {
+         font-size: 20px;
+         margin: 0;
+      }
+
+      .slogan {
+         text-align: center;
+         font-size: 18px;
+         font-style: italic;
+         color: #0056b3;
+         margin-bottom: 20px;
+      }
+
+      .container {
+         width: 90%;
+         max-width: 800px;
+         margin: 30px auto;
+         background: white;
+         padding: 30px;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      h2 {
+         text-align: center;
+         color: #0056b3;
+      }
+
+      label {
+         font-weight: bold;
+         display: block;
+         margin-top: 10px;
+      }
+
+      .form-group {
+         display: flex;
+         gap: 10px;
+         margin-bottom: 15px;
+      }
+
+      .form-group input,
+      .form-group select {
+         flex: 1;
+         padding: 10px;
+         border: 1px solid #ddd;
+         border-radius: 5px;
+         font-size: 14px;
+      }
+
+      input,
+      select,
+      textarea {
+         width: 100%;
+         padding: 12px;
+         border: 1px solid #ccc;
+         border-radius: 5px;
+         font-size: 16px;
+      }
+
+      .btn {
+         display: block;
+         width: 100%;
+         padding: 15px;
+         background: #0073e6;
+         color: white;
+         border: none;
+         border-radius: 5px;
+         font-size: 18px;
+         cursor: pointer;
+         transition: background 0.3s;
+      }
+
+      .btn:hover {
+         background: #005bb5;
+      }
+
+      footer {
+         text-align: center;
+         padding: 15px;
+         background: #0073e6;
+         color: white;
+         font-size: 14px;
+         margin-top: 30px;
+      }
+   </style>
+   <script>
+      function toUpperCaseName(event) {
+         event.value = event.value.toUpperCase();
+      }
+   </script>
+</head>
+
+<body>
+   <div class="header">
+      <div class="header-text">
+         <h1>ĐẶT LỊCH HẸN KHÁM CHỮA BỆNH</h1>
+      </div>
+   </div>
+   <div class="container">
+      <h2>Thông Tin Đăng Ký</h2>
+      <form action="#" method="POST">
+         <div class="form-group">
+            <input type="text" name="name" placeholder="Họ và Tên" required oninput="toUpperCaseName(this)">
+            <input type="email" name="email" placeholder="Email">
+         </div>
+         <div class="form-group">
+            <input type="date" name="dob" required>
+            <input type="tel" name="phone" placeholder="Số Điện Thoại" required>
+         </div>
+         <div class="form-group">
+            <select name="gender" required>
+               <option value="">Giới Tính</option>
+               <option value="Nam">Nam</option>
+               <option value="Nữ">Nữ</option>
+               <option value="Khác">Khác</option>
+            </select>
+            <input type="text" name="address" placeholder="Địa Chỉ" required>
+         </div>
+         <div class="form-group">
+            <input type="date" name="date" required>
+            <select name="department" required>
+               <option value="">Chuyên Khoa</option>
+               <option value="Nội tổng quát">Nội tổng quát</option>
+               <option value="Nhi khoa">Nhi khoa</option>
+               <option value="Da liễu">Da liễu</option>
+            </select>
+         </div>
+         <div class="form-group">
+            <select name="doctor" required>
+               <option value="">Chọn Bác Sĩ</option>
+               <option value="Bác sĩ A">Bác sĩ A</option>
+               <option value="Bác sĩ B">Bác sĩ B</option>
+               <option value="Bác sĩ C">Bác sĩ C</option>
+            </select>
+            <select name="time" required>
+               <option value="">Buổi Khám</option>
+               <option value="Sáng">Sáng</option>
+               <option value="Chiều">Chiều</option>
+            </select>
+         </div>
+         <textarea name="symptoms" placeholder="Triệu chứng cần khám">
